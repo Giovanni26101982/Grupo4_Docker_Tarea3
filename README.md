@@ -98,7 +98,7 @@ docker images | grep fastapi-multistage
 
 --- 
 
-5. **# Crear el contenedor**
+6. **# Crear el contenedor**
 
 ```bash
 docker run -d -p 8000:8004 --name fastapi fastapi-multistage:dev
@@ -115,6 +115,39 @@ docker logs -f fastapi (ctrl + c para salir)
 ```
 <img width="921" height="115" alt="08" src="https://github.com/user-attachments/assets/fc14feb0-d1ef-4398-b47b-7bf47300fcbd" />
 
+--- 
+
+**Subir a Docker Hub**
+--- 
+8. **# iniciar sesión en docker**
+
+```bash
+docker login -u <username> (docker login -u tinchoxd)
+```
+--- 
+
+9. **# ingresar contraseña o token**
+
+```bash
+El token se obtiene en la cuenta de DockerHub
+Docker Hub → Account Settings → Security → New Access Token.
+
+```
+<img width="962" height="762" alt="09" src="https://github.com/user-attachments/assets/db56a73b-44cb-48d4-80f7-a0c8cc7b00ff" />
+
+
+<img width="1002" height="166" alt="10" src="https://github.com/user-attachments/assets/faabc062-af62-409e-8e54-dc1413e77391" />
+
+--- 
+
+10. **# Etiquetar la imagen**
+
+```bash
+docker tag fastapi-multistage:dev <tu_usuario_dockerhub>/fastapi-multistage:latest
+
+```
+
+<img width="707" height="32" alt="11" src="https://github.com/user-attachments/assets/0ac73e08-f97b-485a-980d-0006472ce61b" />
 
 --- 
 
