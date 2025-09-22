@@ -36,11 +36,12 @@ El trabajo contempla:
 
 ## 📂 Estructura
 ```bash
-├── .env/          
-├── comandos.txt/         # Código fuente
-├── mysql-init
-├   └── init.sql              # Base de datos
-└── README.md
+├── app/
+|   └── main.py 
+├── Dockerfile
+├── dockerhub-scout.yml
+├── README.md
+└── requerimientos.txt
 
 ```
 --- 
