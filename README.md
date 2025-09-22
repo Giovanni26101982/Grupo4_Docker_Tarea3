@@ -38,6 +38,7 @@ El trabajo contempla:
 ```bash
 ├── app/
 |   └── main.py 
+├── .gitignore
 ├── Dockerfile
 ├── dockerhub-scout.yml
 ├── README.md
