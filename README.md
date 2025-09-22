@@ -151,6 +151,39 @@ docker tag fastapi-multistage:dev <tu_usuario_dockerhub>/fastapi-multistage:late
 
 --- 
 
+11. **# Subir la Imagen**
+
+<img width="1076" height="234" alt="12" src="https://github.com/user-attachments/assets/5c2fc3c6-cf95-4d08-9e2e-2fe85a190c1c" />
+
+--- 
+
+**Docker Scout**
+---
+12. **Probar Docker Scout**
+   - **# Verificar que exista docker scout**
+      ```bash
+         docker scout version         
+      ```
+   - **Verificar donde se encuentran los plugins de docker**
+      ```bash
+         docker info | grep "Docker Root Dir"
+      ```
+      <img width="1103" height="48" alt="13" src="https://github.com/user-attachments/assets/703fe37d-d310-4ba9-b429-1ad6164b459f" />
+
+   - **Si no existe crear la carpeta**
+      ```bash
+         mkdir -p ~/.docker/cli-plugins
+      ```
+      <img width="1057" height="33" alt="14" src="https://github.com/user-attachments/assets/a487d6c0-6827-4e0c-ab2e-fc3a1c44c525" />
+
+   - **Descarga el binario de Docker Scout**
+      ```bash
+         curl -sSL https://github.com/docker/scout-cli/releases/latest/download/docker-scout_linux_amd64 -o ~/.docker/cli-plugins/docker-scout
+      ```
+
+      
+--- 
+
 
 ## ✅ Conclusiones
 
