@@ -80,11 +80,11 @@ docker build -t fastapi-multistage:dev .
 ```
 <img width="955" height="466" alt="03" src="https://github.com/user-attachments/assets/d3722394-7b5f-4bc7-8307-87c086cf0989" />
 
+
 <img width="955" height="716" alt="04" src="https://github.com/user-attachments/assets/c3f0dfb4-4297-45a0-a0f8-8e53a4a3b75d" />
 
-<img width="945" height="117" alt="05" src="https://github.com/user-attachments/assets/1e79bbf3-e907-4eed-8b43-42b710c42a83" />
 
-<img width="951" height="62" alt="06" src="https://github.com/user-attachments/assets/d044a1d8-d632-4aee-a4d7-edfba60f1a02" />
+<img width="945" height="117" alt="05" src="https://github.com/user-attachments/assets/1e79bbf3-e907-4eed-8b43-42b710c42a83" />
 
 --- 
 
@@ -95,6 +95,25 @@ docker images | grep fastapi-multistage
 ```
 
 <img width="951" height="62" alt="06" src="https://github.com/user-attachments/assets/6ba26d6e-3676-41f6-a236-0f9e8b53c763" />
+
+--- 
+
+5. **# Crear el contenedor**
+
+```bash
+docker run -d -p 8000:8004 --name fastapi fastapi-multistage:dev
+```
+
+<img width="1370" height="60" alt="07" src="https://github.com/user-attachments/assets/8d583ca5-e3ba-4512-a89e-c73c7beaf5af" />
+
+--- 
+
+7. **# Verificar el Log**
+
+```bash
+docker logs -f fastapi (ctrl + c para salir)
+```
+<img width="921" height="115" alt="08" src="https://github.com/user-attachments/assets/fc14feb0-d1ef-4398-b47b-7bf47300fcbd" />
 
 
 --- 
