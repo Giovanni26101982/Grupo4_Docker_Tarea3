@@ -17,15 +17,14 @@
 
 ## 📖 Introducción
 
-El despliegue de servicios en contenedores permite crear entornos ligeros, portables y fáciles de administrar.  
-En este proyecto se implementa una infraestructura básica compuesta por **MySQL** como motor de base de datos y **phpMyAdmin** como herramienta de gestión web, utilizando **Docker**.  
+En la presente tarea se documenta el desarrollo y entrega del laboratorio grupal fastapi-app, cuyo objetivo es construir, publicar y evaluar la seguridad de una imagen Dockerfile multistage, y automatizar el análisis de vulnerabilidades mediante GitHub Actions con Docker Scout.
 
-La solución aprovecha:
-- **Contenedores** para ejecutar cada servicio de forma aislada.  
-- **Redes** para permitir la comunicación segura entre los servicios sin exponer puertos innecesarios.  
-- **Volúmenes** para garantizar la persistencia de los datos, incluso si los contenedores son eliminados o reiniciados.  
+El trabajo contempla: 
 
-Este enfoque facilita el desarrollo, las pruebas y el despliegue, al mismo tiempo que reduce los problemas de configuración y compatibilidad entre entornos.  
+- Con base en el laboratorio de fastapi-app, deberan subir la imagen que le corresponde a su grupo y las aplicaciones a su repositorio de github 
+- Construir la imagen, subir a docker hub y realizar el análisis de vulnerabilidades con docker scout mediante un flujo de github actions
+- Realizar el reporte de lo ejecutado en el archivo Readme.md del repositorio. Dentro del reporte debe constar la captura de pantalla que muestre la subida de la imagen en su repositorio de Docker hub y los resultados del análisis de vulnerabilidades con docker scout.
+- Este trabajo se lo realizó de manera grupal y se encuentra publicado eb el repositorio git.
 
 ---
 
@@ -148,26 +147,20 @@ docker network create mysql-network
 
 ## ✅ Conclusiones
 
-1. **Facilidad de despliegue**  
-   Docker permite levantar un entorno con MySQL 9.0 y PhpMyAdmin en pocos comandos, sin necesidad de configuraciones manuales extensas.  
+1. **Cumplimiento de los entregables y trazabilidad**  
+   Se construyó la imagen asociada al grupo, se publicó en Docker Hub y se registraron evidencias del proceso y del análisis de vulnerabilidades en el README.md.
 
-2. **Portabilidad**  
-   El proyecto puede ejecutarse en cualquier máquina con Docker, garantizando que las versiones de MySQL y PhpMyAdmin sean consistentes entre distintos entornos (desarrollo, pruebas, producción).  
+1. **Impacto de la estrategia de construcción (single vs multistage)**  
+   El uso de `multistage` (cuando aplicó) permitió `reducir tamaño de imagen` y `disminuir la superficie de ataque`, mejorando tiempos de pull y despliegue. En escenarios simples, single puede ser suficiente, pero para producción la strategia multietapa mostró claras ventajas de seguridad y eficiencia.
 
-3. **Aislamiento**  
-   La base de datos y la herramienta de administración corren en contenedores independientes, evitando conflictos con instalaciones locales.  
+1. **Integración de seguridad en el ciclo de vida (Docker Scout + CI)**  
+   La automatización con `GitHub Actions` y `Docker Scout` aportó `visibilidad continua`. Esta práctica refuerza la cultura `DevSecOps` al detectar riesgos antes del despliegue.
 
-4. **Escalabilidad**  
-   La configuración con `docker-compose` permite agregar fácilmente nuevos servicios (como un backend o balanceador) sin alterar la base de datos ya levantada.  
+1. **Trabajo individual con enfoque profesional**  
+   La organización para la ejecución del trabajo grupal, junto con la publicación en Docker Hub y auditoría automatizada, favoreció la `responsabilidad técnica` y la `calidad del entregable`, alineando el resultado con expectativas de acuerdo a lo solicitado.
 
-5. **Mantenimiento reducido**  
-   Las actualizaciones de MySQL o PhpMyAdmin se realizan simplemente cambiando la imagen en el `docker-compose.yml`, simplificando el mantenimiento a largo plazo.  
+1. La actividad no solo cumplió los requerimientos, sino que consolidó un `pipeline reproducible y seguro` para empaquetar aplicaciones con Docker, `publicarlas` y `evaluar su postura de seguridad` de forma integral, dejando como valor final un repositorio verificable y un informe con evidencias claras del proceso.
 
-6. **Acceso simplificado**  
-   PhpMyAdmin brinda una interfaz gráfica accesible desde el navegador, lo que facilita la gestión de la base de datos para usuarios no familiarizados con la línea de comandos.  
-
-7. **Persistencia de datos**  
-   Con volúmenes de Docker, los datos se conservan incluso si los contenedores se reinician o eliminan, asegurando confiabilidad.  
-
+   
 
 ---
