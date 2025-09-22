@@ -189,8 +189,18 @@ docker tag fastapi-multistage:dev <tu_usuario_dockerhub>/fastapi-multistage:late
    - **Verificar la version de scout**
 
      <img width="759" height="422" alt="15" src="https://github.com/user-attachments/assets/4c6dfba9-d2d5-4a14-bdac-3c9c298da009" />
+ 
+--- 
 
-      
+13. **# Ejecutar análisis**
+
+```bash
+docker scout cves tinchoxd/fastapi-multistage:latest
+
+```
+
+<img width="707" height="32" alt="11" src="https://github.com/user-attachments/assets/0ac73e08-f97b-485a-980d-0006472ce61b" />
+
 --- 
 
 
