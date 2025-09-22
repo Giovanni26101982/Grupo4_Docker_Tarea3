@@ -396,7 +396,7 @@ RESP: {"status":"ok","app":"Aplicación: fastapi-multistage"}
 --- 
 
 
-## ✅ Conclusiones
+## ✅ Conclusiones - Recomendaciones
 
 1. El despliegue de la aplicación `FastAPI con Docker` se realizó exitosamente mediante la construcción de una imagen multistage, permitiendo una implementación más ligera y optimizada.
    
