@@ -181,6 +181,15 @@ docker tag fastapi-multistage:dev <tu_usuario_dockerhub>/fastapi-multistage:late
          curl -sSL https://github.com/docker/scout-cli/releases/latest/download/docker-scout_linux_amd64 -o ~/.docker/cli-plugins/docker-scout
       ```
 
+   - **Otorgar permisos de Ejecución**
+      ```bash
+         chmod +x ~/.docker/cli-plugins/docker-scout
+      ```
+
+   - **Verificar la version de scout**
+
+     <img width="759" height="422" alt="15" src="https://github.com/user-attachments/assets/4c6dfba9-d2d5-4a14-bdac-3c9c298da009" />
+
       
 --- 
 
