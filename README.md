@@ -1,5 +1,5 @@
 # 📌 Grupo 4
-## 📌 TAREA 03: Despliegue MySQL 9.0 + phpMyAdmin 5.2.1 en Docker 
+## 📌 TAREA 03: Manejo de imágenes y análisis de vulnerabilidades con github actions. 
 
 
 ---
@@ -147,6 +147,15 @@ docker network create mysql-network
 
 ## ✅ Conclusiones
 
+1. El despliegue de la aplicación `FastAPI con Docker` se realizó exitosamente mediante la construcción de una imagen multistage, permitiendo una implementación más ligera y optimizada.
+   
+3. El análisis con Docker Scout evidenció que, aunque la aplicación funciona correctamente, existen vulnerabilidades conocidas en librerías del sistema base y dependencias de Python.
+
+4. Para mitigar riesgos de seguridad se recomienda:
+   - Actualizar la librería starlette a la versión 0.47.2 o superior, corrigiendo fallas de recursos sin límite.
+   - Mantener actualizado el sistema base y explorar imágenes oficiales más recientes o variantes “slim” para reducir la superficie de ataque.
+   - Establecer un flujo de integración continua (CI/CD) que incluya escaneo automático de vulnerabilidades en cada build de imagen.
+  
 1. **Cumplimiento de los entregables y trazabilidad**  
    Se construyó la imagen asociada al grupo, se publicó en Docker Hub y se registraron evidencias del proceso y del análisis de vulnerabilidades en el README.md.
 
@@ -161,6 +170,6 @@ docker network create mysql-network
 
 1. La actividad no solo cumplió los requerimientos, sino que consolidó un `pipeline reproducible y seguro` para empaquetar aplicaciones con Docker, `publicarlas` y `evaluar su postura de seguridad` de forma integral, dejando como valor final un repositorio verificable y un informe con evidencias claras del proceso.
 
-   
+3. Finalmente, la práctica demuestra la importancia de no solo asegurar la funcionalidad del contenedor, sino también su seguridad y mantenimiento continuo en entornos de producción.
 
 ---
