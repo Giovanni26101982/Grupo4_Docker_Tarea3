@@ -8,9 +8,9 @@
 | Nro. | Nombre | Link |
 |------|---------|---------|
 | 1 | Giovanni Xavier Baño Jaya | https://github.com/Giovanni26101982/Grupo4_Docker_Tarea3 |
-| 2 | Portero Salas Onofre Lolislao | https://github.com/oportero/Grupo4_Docker_Tarea1 |
+| 2 | Portero Salas Onofre Lolislao | https://github.com/oportero/Grupo4_Docker_Tarea3 |
 | 3 | Jara Pauta Cesar Paúl |  https://github.com/PaulJara84/Grupo4_Docker_Tarea1  |
-| 4 | Maldonado Flores Oscar Alexander | https://github.com/Oscar112248/Docker |
+| 4 | Maldonado Flores Oscar Alexander | https://github.com/Oscar112248/Grupo4_Docker_Tarea3 |
 | 5 | Balarezo Leon Ricardo Martin | https://github.com/TinchoXD/Grupo4_Docker_Tarea1 |
 
 ---
