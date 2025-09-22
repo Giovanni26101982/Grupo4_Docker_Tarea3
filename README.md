@@ -29,8 +29,8 @@ El trabajo contempla:
 ---
 
 ## 🚀 Características
-- MySQL 9.0  
-- phpMyAdmin 5.2.1
+- GitHub Actions  
+
 
 ---  
 
@@ -48,99 +48,54 @@ El trabajo contempla:
 ## 🛠 Desarrollo - Procedimiento
 
 --- 
-1. **Clonar el repositorio en el directorio**
-
-<img width="827" height="198" alt="01" src="https://github.com/user-attachments/assets/7982315d-5d0b-411c-bacd-7ce12303d66c" />
-
---- 
-
-2. **Navegar al directorio /Docker y listar los archivos**
+1. **# actualizar**
 
 ```bash
-ls -l
+sudo apt update && sudo apt dist-upgrade –y
 ```
-<img width="828" height="198" alt="02" src="https://github.com/user-attachments/assets/bc339bec-c4a2-422f-bc06-441a6352f296" />
-
 --- 
 
-3. **Tree ->**
+2. **#clonar repositorio**
 
-<img width="289" height="157" alt="03" src="https://github.com/user-attachments/assets/a3d4c6b3-9700-48f6-9da5-b1982b014fbd" />
-
---- 
-
-4. **Crear la Red**
 ```bash
-docker network create mysql-network
-   ```
-   <img width="826" height="51" alt="04" src="https://github.com/user-attachments/assets/1e68d637-235d-4aa2-8051-05b52be45349" />
+git clone https://github.com/TinchoXD/Grupo4_Docker_Tarea3.git
+```
+<img width="798" height="171" alt="01" src="https://github.com/user-attachments/assets/b3f5cfa3-6a3d-4cb6-815f-8597f1010170" />
 
 --- 
 
-5. **Crear un Volumen**
- ```bash
-   docker volume create mysql-volume
-   ```
-   <img width="829" height="53" alt="05" src="https://github.com/user-attachments/assets/b43e6e46-eb3f-4402-a0e2-daa402116cb1" />
+3. **#navegar al repositorio**
+
+```bash
+cd Grupo4_Docker_Tarea3/
+```
+<img width="749" height="174" alt="02" src="https://github.com/user-attachments/assets/a308a775-c3ab-4218-84f7-9048b8c24109" />
 
 --- 
 
-6. **Crear contenedor de MySQL (con versión 9.0)**
- ```bash
- docker run -d \
- --name mysql-container \
- --network mysql-network \
- --env-file .env \
- -v $(pwd)/mysql-volumen:/var/lib/mysql \
- -v $(pwd)/mysql-init:/docker-entrypoint-initdb.d \
- mysql:9.0
+4. **# Construir la imagen Local**
 
-   ```
-<img width="840" height="487" alt="06" src="https://github.com/user-attachments/assets/cc5a53d2-3487-492f-ba5e-9552f81b1d3c" />
+```bash
+docker build -t fastapi-multistage:dev .
+```
+<img width="955" height="466" alt="03" src="https://github.com/user-attachments/assets/d3722394-7b5f-4bc7-8307-87c086cf0989" />
 
---- 
+<img width="955" height="716" alt="04" src="https://github.com/user-attachments/assets/c3f0dfb4-4297-45a0-a0f8-8e53a4a3b75d" />
 
-7. **Crear contenedor de phpMyAdmin**
- ```bash
- docker run -d \
- --name phpmyadmin-container \
- --network mysql-network \
- --env-file .env \
- -p 8080:80 \
- phpmyadmin:5.2.1
-   ```
-<img width="829" height="657" alt="07" src="https://github.com/user-attachments/assets/3e5297e4-c448-4b5c-8538-1c321cfebddd" />
+<img width="945" height="117" alt="05" src="https://github.com/user-attachments/assets/1e79bbf3-e907-4eed-8b43-42b710c42a83" />
+
+<img width="951" height="62" alt="06" src="https://github.com/user-attachments/assets/d044a1d8-d632-4aee-a4d7-edfba60f1a02" />
 
 --- 
 
-8. **Verificar los contenedores creados**
- ```bash
- docker ps -a
-   ```
-<img width="1070" height="71" alt="08" src="https://github.com/user-attachments/assets/31d91463-2103-4dfb-b06d-411682f542be" />
+5. **# Verificar que exista la Imagen**
 
---- 
+```bash
+docker images | grep fastapi-multistage
+```
 
-9. **Abrir un navegador en el host y abrir la dirección http://localhost:8080/**
- ```bash
- [docker ps -a](http://localhost:8080/)
-   ```
-<img width="1071" height="572" alt="09" src="https://github.com/user-attachments/assets/ac560485-1868-4bed-957b-f975eb21dfc9" />
+<img width="951" height="62" alt="06" src="https://github.com/user-attachments/assets/6ba26d6e-3676-41f6-a236-0f9e8b53c763" />
 
---- 
-
-10. **Abrir un navegador en el host y abrir la dirección http://localhost:8080/**
-
-<img width="1071" height="572" alt="09" src="https://github.com/user-attachments/assets/ac560485-1868-4bed-957b-f975eb21dfc9" />
-
---- 
-
-11. **Usar las credenciales del .env**
-
-   - MYSQL_USER=adminmdmq
-   - MYSQL_PASSWORD=Emmeth2906@
-
-<img width="1069" height="409" alt="11" src="https://github.com/user-attachments/assets/4ad24c70-8b7e-4db6-af4c-747be9bf53a5" />
 
 --- 
 
