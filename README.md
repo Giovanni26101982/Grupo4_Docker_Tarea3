@@ -60,9 +60,10 @@ sudo apt update && sudo apt dist-upgrade –y
 2. **#clonar repositorio**
 
 ```bash
-git clone https://github.com/TinchoXD/Grupo4_Docker_Tarea3.git
+git clone https://github.com/Giovanni26101982/Grupo4_Docker_Tarea3.git
 ```
-<img width="798" height="171" alt="01" src="https://github.com/user-attachments/assets/b3f5cfa3-6a3d-4cb6-815f-8597f1010170" />
+<img width="921" height="239" alt="image" src="https://github.com/user-attachments/assets/cb85311c-a722-4ef5-ad25-31d51a74b73a" />
+
 
 --- 
 
@@ -70,8 +71,11 @@ git clone https://github.com/TinchoXD/Grupo4_Docker_Tarea3.git
 
 ```bash
 cd Grupo4_Docker_Tarea3/
+
+tree
 ```
-<img width="749" height="174" alt="02" src="https://github.com/user-attachments/assets/a308a775-c3ab-4218-84f7-9048b8c24109" />
+<img width="921" height="289" alt="image" src="https://github.com/user-attachments/assets/236a769e-a6b7-4224-886d-1b86e8207c6a" />
+
 
 --- 
 
@@ -80,13 +84,7 @@ cd Grupo4_Docker_Tarea3/
 ```bash
 docker build -t fastapi-multistage:dev .
 ```
-<img width="955" height="466" alt="03" src="https://github.com/user-attachments/assets/d3722394-7b5f-4bc7-8307-87c086cf0989" />
-
-
-<img width="955" height="716" alt="04" src="https://github.com/user-attachments/assets/c3f0dfb4-4297-45a0-a0f8-8e53a4a3b75d" />
-
-
-<img width="945" height="117" alt="05" src="https://github.com/user-attachments/assets/1e79bbf3-e907-4eed-8b43-42b710c42a83" />
+<img width="921" height="353" alt="image" src="https://github.com/user-attachments/assets/40e6aa07-d3c5-48d4-adcb-1241d184518f" />
 
 --- 
 
@@ -95,8 +93,7 @@ docker build -t fastapi-multistage:dev .
 ```bash
 docker images | grep fastapi-multistage
 ```
-
-<img width="951" height="62" alt="06" src="https://github.com/user-attachments/assets/6ba26d6e-3676-41f6-a236-0f9e8b53c763" />
+<img width="921" height="105" alt="image" src="https://github.com/user-attachments/assets/55034498-4bfd-4f8d-af98-80865e4a9d3f" />
 
 --- 
 
