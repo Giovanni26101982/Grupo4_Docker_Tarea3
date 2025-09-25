@@ -103,7 +103,7 @@ docker images | grep fastapi-multistage
 docker run -d -p 8000:8004 --name fastapi fastapi-multistage:dev
 ```
 
-<img width="1370" height="60" alt="07" src="https://github.com/user-attachments/assets/8d583ca5-e3ba-4512-a89e-c73c7beaf5af" />
+<img width="921" height="100" alt="image" src="https://github.com/user-attachments/assets/7bb8ca01-7830-483f-97e0-bc04648e04b6" />
 
 --- 
 
@@ -112,7 +112,8 @@ docker run -d -p 8000:8004 --name fastapi fastapi-multistage:dev
 ```bash
 docker logs -f fastapi (ctrl + c para salir)
 ```
-<img width="921" height="115" alt="08" src="https://github.com/user-attachments/assets/fc14feb0-d1ef-4398-b47b-7bf47300fcbd" />
+<img width="921" height="148" alt="image" src="https://github.com/user-attachments/assets/8bfdafb2-3e6f-4e01-b560-380185340914" />
+
 
 --- 
 
@@ -121,7 +122,7 @@ docker logs -f fastapi (ctrl + c para salir)
 8. **# iniciar sesión en docker**
 
 ```bash
-docker login -u <username> (docker login -u tinchoxd)
+docker login -u <username> (docker login -u giovanni26101982)
 ```
 --- 
 
@@ -132,10 +133,9 @@ El token se obtiene en la cuenta de DockerHub
 Docker Hub → Account Settings → Security → New Access Token.
 
 ```
-<img width="962" height="762" alt="09" src="https://github.com/user-attachments/assets/db56a73b-44cb-48d4-80f7-a0c8cc7b00ff" />
+<img width="921" height="660" alt="image" src="https://github.com/user-attachments/assets/2ceeeb1d-ca72-4a61-8b80-e613090e6120" />
 
-
-<img width="1002" height="166" alt="10" src="https://github.com/user-attachments/assets/faabc062-af62-409e-8e54-dc1413e77391" />
+<img width="921" height="242" alt="image" src="https://github.com/user-attachments/assets/5072e346-7eed-4489-a82f-1c4c8b72e40e" />
 
 --- 
 
@@ -144,15 +144,22 @@ Docker Hub → Account Settings → Security → New Access Token.
 ```bash
 docker tag fastapi-multistage:dev <tu_usuario_dockerhub>/fastapi-multistage:latest
 
+docker tag fastapi-multistage:dev giovanni26101982/fastapi-multistage:latest
+
 ```
 
-<img width="707" height="32" alt="11" src="https://github.com/user-attachments/assets/0ac73e08-f97b-485a-980d-0006472ce61b" />
+<img width="921" height="82" alt="image" src="https://github.com/user-attachments/assets/9534f829-1a36-46c4-b1be-6d2b35cc044b" />
 
 --- 
 
 11. **# Subir la Imagen**
 
-<img width="1076" height="234" alt="12" src="https://github.com/user-attachments/assets/5c2fc3c6-cf95-4d08-9e2e-2fe85a190c1c" />
+```bash
+docker push giovanni1982/fastapi-multistage:latest
+
+```
+
+<img width="921" height="313" alt="image" src="https://github.com/user-attachments/assets/ab395cd4-2fc8-464a-97db-2c8e2ddca682" />
 
 --- 
 
