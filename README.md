@@ -133,7 +133,8 @@ El token se obtiene en la cuenta de DockerHub
 Docker Hub → Account Settings → Security → New Access Token.
 
 ```
-<img width="921" height="660" alt="image" src="https://github.com/user-attachments/assets/2ceeeb1d-ca72-4a61-8b80-e613090e6120" />
+<img width="921" height="663" alt="image" src="https://github.com/user-attachments/assets/e295c0d8-860d-4d8e-9d30-0d03467ad09a" />
+
 
 <img width="921" height="242" alt="image" src="https://github.com/user-attachments/assets/5072e346-7eed-4489-a82f-1c4c8b72e40e" />
 
