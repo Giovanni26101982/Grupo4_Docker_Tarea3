@@ -202,7 +202,7 @@ docker push giovanni1982/fastapi-multistage:latest
 
 
       # Ejecutar análisis
-      docker scout cves tinchoxd/fastapi-multistage:latest
+      docker scout cves giovanni26101982/fastapi-multistage:latest
       
           ✓ SBOM of image already cached, 143 packages indexed
           ✗ Detected 11 vulnerable packages with a total of 23 vulnerabilities
